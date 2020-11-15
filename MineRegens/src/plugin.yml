@@ -1,0 +1,21 @@
+name: MineRegens
+author: KingOfMars4
+main: me.kingofmars4.mineregens.Main
+version: 1.0
+commands:
+    createmine:
+        usage: /createmine (name)
+    deletemine:
+        usage: /deletemine (name)
+    minesetpos:
+        usage: /minesetpos (1/2)
+    mineblocks:
+        usage: /mineblocks (mine)
+    savemine:
+        usage: /savemine (mine)      
+    saveallmines:
+        usage: /saveallmines           
+    resetmime:
+        usage: /resetmine (mine)      
+    resetallmines:
+        usage: /resetallmines               

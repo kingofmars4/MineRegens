@@ -1,0 +1,10 @@
+Options:
+    pluginPrefix: '&2[MineRegens] '
+    resetBlocksDelay: 300
+    
+Messages:
+    noPermission: '&cYou lack permissions!'
+    mustBePlayer: '&cYou must be a player in order to use that command!'
+    noPermToBreak: '&cYou do not have permission to break blocks on mine &e%m&c!'
+    mineDoesNotExist: '&e%m &cis not a valid mine!'
+    
