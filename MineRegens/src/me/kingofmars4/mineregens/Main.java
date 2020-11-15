@@ -38,6 +38,10 @@ public class Main extends JavaPlugin implements CommandExecutor {
         resetMinesTimer();
     }
     
+    @Override
+    public void onDisable() {
+    	MineManager.get().resetAllMines();
+    }
     
     public void loadCommands() {
     	getCommand("createmine").setExecutor(this);

@@ -15,7 +15,7 @@ commands:
         usage: /savemine (mine)      
     saveallmines:
         usage: /saveallmines           
-    resetmime:
+    resetmine:
         usage: /resetmine (mine)      
     resetallmines:
         usage: /resetallmines               

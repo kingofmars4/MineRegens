@@ -24,15 +24,6 @@ public class Mine {
 		this.world = l1.getWorld();
 	}
 	
-	public boolean isIn (Location l) {
-		if (l.getX() > x1 && l.getX() < x2) {
-			if (l.getZ() > z1 && l.getZ() < z2) {
-				return true;
-			}
-		}
-		return false;
-	}
-	
 	public String getName() {
 		return this.name;
 	}

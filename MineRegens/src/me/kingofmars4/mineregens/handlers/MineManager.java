@@ -65,20 +65,39 @@ public class MineManager {
 	
 	public Mine getPlayerMine (Player p) {
 		for (Mine m : Mines) {
-			if (m.isIn(p.getLocation())) {
+			if (isInMine(p.getLocation())) {
 				return m;
 			}
 		}
 		return null;
 	}
 	
-	public boolean isInMine(Player p) {
-		for (Mine m : Mines) {
-			if (m.isIn(p.getLocation())) {
-				return true;
+	public boolean isInMine (Location l) {
+		for (Mine m :Mines) {
+			int x1, x2, z1, z2;
+			if (m.getx1()>m.getx2()) { x1 = m.getx1(); x2 = m.getx2(); } else { x1 = m.getx2(); x2 = m.getx1(); }
+			if (m.getz1()>m.getz2()) { z1 = m.getz1(); z2 = m.getz2(); } else { z1 = m.getz2(); z2 = m.getz1(); }
+			if (l.getX() > x2 && l.getX() < x1) {
+				if (l.getZ() > z2 && l.getZ() < z1) {
+					return true;
+				}
 			}
 		}
 		return false;
+	}
+	
+	public Mine getMineFromLoc (Location l) {
+		for (Mine m :Mines) {
+			int x1, x2, z1, z2;
+			if (m.getx1()>m.getx2()) { x1 = m.getx1(); x2 = m.getx2(); } else { x1 = m.getx2(); x2 = m.getx1(); }
+			if (m.getz1()>m.getz2()) { z1 = m.getz1(); z2 = m.getz2(); } else { z1 = m.getz2(); z2 = m.getz1(); }
+			if (l.getX() > x2 && l.getX() < x1) {
+				if (l.getZ() > z2 && l.getZ() < z1) {
+					return m;
+				}
+			}
+		}
+		return null;
 	}
 	
 	public boolean isMine (String name) {

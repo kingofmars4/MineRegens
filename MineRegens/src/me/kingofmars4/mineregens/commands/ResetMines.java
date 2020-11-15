@@ -30,7 +30,7 @@ public class ResetMines implements CommandExecutor {
 			}
 		}
 		
-		return false;
+		return true;
 	}
 
 }
